@@ -1,4 +1,6 @@
 import AOS from 'aos';
+
+import 'reset-css';
 import 'aos/dist/aos.css';
 
 import '../styles/index.scss';
