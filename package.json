@@ -65,7 +65,6 @@
     "aos": "^3.0.0-beta.6",
     "bootstrap-4-grid": "^3.4.0",
     "core-js": "^3.6.5",
-    "normalize.css": "^8.0.1",
     "reset-css": "^5.0.1"
   }
 }
