@@ -1,4 +1,8 @@
 {
+  "extends": [
+    "airbnb",
+    "airbnb/hooks"
+  ],
   "parser": "babel-eslint",
   "env": {
     "browser": true,
@@ -9,6 +13,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "semi": 2
+    "semi": 2,
+    "global-require": 0
   }
 }
