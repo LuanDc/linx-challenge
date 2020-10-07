@@ -1,0 +1,23 @@
+.main-title {
+  font-size: 20px;
+  line-height: 35px;
+  color: $white;
+
+  strong {
+    font-size: 40px;
+    font-weight: font-weight('bold');
+    display: block;
+  }
+}
+
+.main-subtitle {
+  font-size: 14px;
+  font-weight: font-weight('regular');
+  line-height: 16px;
+  color: $white;
+  margin-top: 9px;
+
+  @include respond-to('small') {
+    margin-top: 24px;
+  }
+}

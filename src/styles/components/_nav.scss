@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 56px;
+
+  &__item {
+    flex-basis: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+    @include respond-to('small') {
+      flex-wrap: nowrap;
+      flex-basis: initial;
+    }
+  }
+
+  &__link {
+    background: $white;
+    padding: 12px 0;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: font-weight('regular');
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: $box-shadow;
+    width: 160px;
+    height: 40px;
+    color: $purple;
+
+    &:hover {
+      color: darken($purple, 15%);
+      background-color: darken($white, 8%);
+      cursor: pointer;
+    }
+  }
+}
