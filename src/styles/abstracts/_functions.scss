@@ -3,3 +3,14 @@
 
   @return #{$rem-size}rem;
 }
+
+@function font-weight($weight) {
+  @if map-has-key($weights, $weight) {
+    @return map-get($weights, $weight);
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$weight}`. "
+      + "Available breakpoints are: #{map-keys($weights)}.";
+  }
+}
