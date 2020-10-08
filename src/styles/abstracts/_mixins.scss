@@ -10,3 +10,9 @@
       + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+@mixin container($padding-top) {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $padding-top 16px;
+}

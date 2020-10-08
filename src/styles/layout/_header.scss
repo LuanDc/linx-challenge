@@ -4,9 +4,7 @@
   background: transparent;
 
   &__content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 69px 16px;
+    @include container(69px);
 
     @include respond-to('small') {
       text-align: center;
