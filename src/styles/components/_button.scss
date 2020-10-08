@@ -1,0 +1,40 @@
+.button {
+  background: $white;
+  padding: 12px 0;
+  font-size: rem(14);
+  text-align: center;
+  font-weight: font-weight('regular');
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: $box-shadow;
+  color: $purple;
+  border: none;
+
+  &:hover {
+    color: darken($purple, 15%);
+    background-color: darken($white, 8%);
+    cursor: pointer;
+  }
+
+  &--primary {
+    background: $light-purple;
+    color: $white;
+
+    &:hover {
+      background-color: lighten($purple, 10%);
+      color: $white;
+      cursor: pointer;
+    }
+  }
+
+  &--sm {
+    width: 160px;
+    height: 40px;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+    font-size: rem(16);
+  }
+}

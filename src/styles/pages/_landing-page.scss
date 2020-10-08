@@ -1,0 +1,22 @@
+.contact {
+  @include container(29.11px);
+
+  @include respond-to('medium') {
+    display: flex;
+  }
+
+  &__content {
+    @include respond-to('medium') {
+      width: 60%;
+      margin-right: 60px;
+    }
+  }
+
+  &__form {
+    margin-top: 30px;
+
+    @include respond-to('medium') {
+      width: 40%;
+    }
+  }
+}
