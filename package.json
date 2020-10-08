@@ -63,6 +63,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
     "aos": "^3.0.0-beta.6",
+    "axios": "^0.20.0",
     "bootstrap-4-grid": "^3.4.0",
     "core-js": "^3.6.5",
     "reset-css": "^5.0.1",
