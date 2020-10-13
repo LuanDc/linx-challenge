@@ -1,5 +1,5 @@
 import ProductsService from '../domain/ProductsService';
-import HttpClient from '../utils/Http';
+import HttpClient from '../infra/http/HttpClient';
 
 import ProductsComponent from '../ui/components/ProductsComponent';
 
