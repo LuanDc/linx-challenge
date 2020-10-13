@@ -10,6 +10,7 @@
     "dev": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
     "start": "npm run build && node server.js"
   },
+  "heroku-run-build-script": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wbkd/webpack-starter.git"
