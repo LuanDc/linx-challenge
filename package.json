@@ -7,7 +7,8 @@
     "lint:styles": "stylelint src",
     "lint:scripts": "eslint src",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
-    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
+    "dev": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+    "start": "npm run build && node server.js"
   },
   "repository": {
     "type": "git",
@@ -66,6 +67,7 @@
     "axios": "^0.20.0",
     "bootstrap-4-grid": "^3.4.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
     "reset-css": "^5.0.1",
     "stylelint-scss": "^3.18.0"
   }
