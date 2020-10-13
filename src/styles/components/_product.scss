@@ -1,0 +1,62 @@
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product {
+  color: #888;
+  margin-bottom: 39px;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond-to('small') {
+    flex-basis: 50%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  @include respond-to('medium') {
+    flex-basis: 25%;
+  }
+
+  &__name {
+    font-size: rem(14);
+    margin-bottom: 10px;
+  }
+
+  &__image {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 14px;
+    margin-right: 23px;
+
+    @include respond-to('small') {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__description {
+    font-size: rem(12);
+    margin-bottom: 14px;
+  }
+
+  &__old-price {
+    font-size: rem(12);
+    margin-bottom: 6px;
+  }
+
+  &__price {
+    font-size: rem(16);
+    font-weight: 800;
+    margin-bottom: 7px;
+  }
+
+  &__installments {
+    font-size: rem(12);
+    margin-bottom: 10px;
+  }
+}

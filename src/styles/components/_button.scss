@@ -1,6 +1,6 @@
 .button {
   background: $white;
-  padding: 12px 0;
+  padding: 12px 20px;
   font-size: rem(14);
   text-align: center;
   font-weight: font-weight('regular');
@@ -32,9 +32,18 @@
     height: 40px;
   }
 
+  &--lg {
+    font-size: rem(16);
+    padding: 12px 36px;
+  }
+
   &--block {
     display: block;
     width: 100%;
-    font-size: rem(16);
+  }
+
+  &--center {
+    margin: 0 auto;
+    display: block;
   }
 }

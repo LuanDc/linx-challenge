@@ -1,4 +1,4 @@
-.contact {
+.contact-section {
   @include container(29.11px);
 
   @include respond-to('medium') {
@@ -19,4 +19,8 @@
       width: 40%;
     }
   }
+}
+
+.products-section {
+  @include container(29.11px);
 }
