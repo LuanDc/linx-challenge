@@ -31,15 +31,18 @@ export default class ProductsComponent {
         `)).join('')}
       </div>
       <button 
-      class="button button--primary button--lg button--center" 
-      data-js="fetch-products"
-    >
+        class="button button--primary button--lg button--center" 
+        data-js="fetch-products"
+      >
       Ainda mais produtos aqui!
     </button>
     `);
   }
 
-  render(products) {
+  render({ products, fetchProducts }) {
     this.element.innerHTML = this.template(products);
+    this.element.querySelector('[data-js="fetch-products"]').addEventListener('click', () => {
+      fetchProducts();
+    });
   }
 }

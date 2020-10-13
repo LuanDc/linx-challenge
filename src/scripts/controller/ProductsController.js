@@ -10,17 +10,27 @@ export default class ProductsController {
     this.productsService = new ProductsService(HttpClient);
 
     this.products = [];
+    this.page = 1;
   }
 
-  async getProducts(page = 1) {
+  async getProducts() {
     const {
       data: {
         products,
       },
-    } = await this.productsService.getProducts(page);
+    } = await this.productsService.getProducts(this.page);
 
     this.products = [...this.products, ...products];
 
-    productsComponent.render(this.products);
+    productsComponent.render({
+      products: this.products,
+      fetchProducts: () => this.nextProductsPage(),
+    });
+  }
+
+  async nextProductsPage() {
+    this.page += 1;
+
+    await this.getProducts();
   }
 }
