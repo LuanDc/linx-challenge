@@ -9,8 +9,10 @@ export default class AppController {
   constructor() {
     this.productsService = new ProductsService(HttpClient);
 
-    this.products = [];
-    this.page = 1;
+    this.state = {
+      products: [],
+      productPage: 1,
+    };
   }
 
   async getProducts() {
@@ -18,18 +20,18 @@ export default class AppController {
       data: {
         products,
       },
-    } = await this.productsService.getProducts(this.page);
+    } = await this.productsService.getProducts(this.state.page);
 
-    this.products = [...this.products, ...products];
+    this.state.products = [...this.state.products, ...products];
 
     productsComponent.render({
-      products: this.products,
+      products: this.state.products,
       fetchProducts: () => this.nextProductsPage(),
     });
   }
 
   async nextProductsPage() {
-    this.page += 1;
+    this.state.page += 1;
 
     await this.getProducts();
   }
