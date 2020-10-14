@@ -5,7 +5,7 @@ import ProductsComponent from '../ui/components/ProductsComponent';
 
 const productsComponent = new ProductsComponent('[data-js="productsComponent"]');
 
-export default class ProductsController {
+export default class AppController {
   constructor() {
     this.productsService = new ProductsService(HttpClient);
 
