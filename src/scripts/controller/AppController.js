@@ -15,6 +15,10 @@ export default class AppController {
     };
   }
 
+  async init() {
+    await this.getProducts();
+  }
+
   async getProducts() {
     const {
       data: {

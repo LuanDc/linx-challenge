@@ -17,5 +17,5 @@ const appController = new AppController();
 window.onload = async function onload() {
   AOS.init();
 
-  await appController.getProducts();
+  await appController.init();
 };
