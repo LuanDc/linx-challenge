@@ -24,3 +24,41 @@
 .products-section {
   @include container(29.11px);
 }
+
+.newsletter-section {
+  @include container(128px);
+
+  &__content {
+    padding: 44px 0 71px 0;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: rem(14);
+    text-align: center;
+    color: #888;
+    margin-bottom: 39px;
+  }
+
+  .form {
+    @include respond-to('medium') {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__group {
+      @include respond-to('medium') {
+        flex: 1;
+      }
+
+      padding: 0 20px;
+    }
+
+    &__submit {
+      width: 100%;
+      margin-top: 50px;
+      text-align: center;
+    }
+  }
+}

@@ -37,6 +37,11 @@
     padding: 12px 36px;
   }
 
+  &--xl {
+    font-size: rem(16);
+    padding: 12px 85px;
+  }
+
   &--block {
     display: block;
     width: 100%;
