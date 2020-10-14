@@ -41,8 +41,10 @@ export default class ProductsComponent {
 
   render({ products, fetchProducts }) {
     this.element.innerHTML = this.template(products);
-    this.element.querySelector('[data-js="fetch-products"]').addEventListener('click', () => {
-      fetchProducts();
-    });
+    this.element
+      .querySelector('[data-js="fetch-products"]')
+      .addEventListener('click', () => {
+        fetchProducts();
+      });
   }
 }

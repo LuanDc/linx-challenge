@@ -25,6 +25,14 @@
       outline: none;
       border: 2px solid $light-purple;
     }
+
+    &--invalid {
+      border: 2px solid #dc3545;
+    }
+
+    &--valid {
+      border: 2px solid #009b81;
+    }
   }
 
   &__radio {
@@ -57,6 +65,20 @@
           background-color: $light-purple;
         }
       }
+    }
+  }
+
+  &__message {
+    font-size: rem(12);
+    margin-top: 8px;
+    display: block;
+
+    &--invalid {
+      color: #dc3545;
+    }
+
+    &--valid {
+      color: #009b81;
     }
   }
 }

@@ -2,8 +2,16 @@ import ProductsService from '../domain/ProductsService';
 import HttpClient from '../infra/http/HttpClient';
 
 import ProductsComponent from '../ui/components/ProductsComponent';
+import NewsLetterComponent from '../ui/components/NewsletterComponent';
+
+import ValidateEmail from '../validation/ValidateEmail';
 
 const productsComponent = new ProductsComponent('[data-js="productsComponent"]');
+console.log(ValidateEmail)
+const newsLetterComponent = new NewsLetterComponent({
+  selector: '[data-js="newsLetterComponent"]', 
+  emailValidator: ValidateEmail
+});
 
 export default class AppController {
   constructor() {
@@ -15,8 +23,13 @@ export default class AppController {
     };
   }
 
+  renderNewsLetter() {
+    newsLetterComponent.render();
+  }
+
   async init() {
     await this.getProducts();
+    this.renderNewsLetter();
   }
 
   async getProducts() {
